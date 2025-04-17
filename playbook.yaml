@@ -1,0 +1,41 @@
+- name: "installing apache"
+  hosts: "webserver"
+  become: "yes"
+
+  tasks:
+    - name: install apache2
+      apt:
+       name: apache2
+       state: latest
+       update_cache: yes
+      become: yes
+    - name: enable apache2     
+      systemd:
+       name: apache2
+       state: started
+       enabled: yes                                                 
+   
+- name: "installing mysql" 
+  hosts: dbserver
+  become: yes
+  tasks:
+    - name: "installing my sql"
+      apt:
+        name: mysql-server
+        state: present
+        update_cache: yes
+    - name: "start and enable service"
+      systemd:
+        name: mysql
+        enabled: yes
+        state: started  
+
+- name: "copy file"
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: "copy files from src to dest"
+      copy:
+        src: /home/ubuntu/foo.txt
+        dest: /home/foo.txt
+        mode: '0777'          
