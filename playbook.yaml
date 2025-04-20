@@ -1,5 +1,5 @@
 - name: "installing apache"
-  hosts: webserver
+  hosts: "webserver"
   become: "yes"
 
   tasks:
@@ -15,27 +15,6 @@
        state: started
        enabled: yes                                                 
    
-- name: "installing mysql" 
-  hosts: dbserver
-  become: yes
-  tasks:
-    - name: "installing my sql"
-      apt:
-        name: mysql-server
-        state: present
-        update_cache: yes
-    - name: "start and enable service"
-      systemd:
-        name: mysql
-        enabled: yes
-        state: started  
 
-- name: "copy file"
-  hosts: 13.218.93.235
-  become: yes
-  tasks:
-    - name: "copy files from src to dest"
-      copy:
-        src: /home/ubuntu/foo.txt
-        dest: /home/foo.txt
-        mode: '0777'          
+ 
+
