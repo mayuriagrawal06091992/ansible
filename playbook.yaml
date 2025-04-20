@@ -1,5 +1,5 @@
 - name: "installing apache"
-  hosts: 13.218.93.235
+  hosts: webserver
   become: "yes"
 
   tasks:
