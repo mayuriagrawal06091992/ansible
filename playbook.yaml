@@ -1,6 +1,6 @@
 - name: "installing apache"
   hosts: "webserver"
-  become: "yes"
+  become: yes
 
   tasks:
     - name: install apache2
