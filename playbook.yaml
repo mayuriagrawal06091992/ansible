@@ -13,7 +13,13 @@
       systemd:
        name: apache2
        state: started
-       enabled: yes                                                 
+       enabled: yes
+       - name: copy file
+       copy:
+        src: /var/lib/jenkins/test.sh
+        dest: /home/ubuntu/test.sh
+        mode: '0755'
+        
    
 
  
