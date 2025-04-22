@@ -15,7 +15,7 @@
        enabled: yes
     - name: copy file
       copy:
-       src: /var/lib/jenkins/test.sh
+       src: ansible_test.sh
        dest: /home/ubuntu/test.sh
        mode: '0755'
         
