@@ -11,8 +11,8 @@
     dest: /home/ubuntu/ansible
     remote_src: yes
     mode: 0755
-- name: "clean tmp folder"
-  file:
-    path: /tmp/ansible
-    state: absent
+#- name: "clean tmp folder"
+#  file:
+#    path: /tmp/ansible
+#    state: absent
 
