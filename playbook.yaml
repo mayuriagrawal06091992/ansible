@@ -1,0 +1,6 @@
+- name: "copy file in webserver"
+  hosts: webserver
+  become: yes
+  roles:
+  - myplaybook
+  
