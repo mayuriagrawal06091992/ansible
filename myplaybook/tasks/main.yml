@@ -1,0 +1,22 @@
+---
+# tasks
+- name: "coy file in webserver"
+  hosts: webserver
+  become: yes
+  tasks:
+    - name: "clone git"
+      git:
+        repo: "https://github.com/mayuriagrawal06091992/ansible.git"
+        dest: /tmp/ansible
+        version: main
+    - name: "copy ansible folder"
+      copy:
+        src: /tmp/ansible
+        dest: /home/ubuntu/ansible
+        remote_src: yes
+        mode: 0755
+    - name: "clean tmp folder"
+      file:
+        path: /tmp/ansible
+        state: absent
+
