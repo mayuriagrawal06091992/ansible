@@ -1,0 +1,13 @@
+.bash_history
+.bash_logout
+.bashrc
+.cache/motd.legal-displayed
+.lesshst
+.profile
+.ssh/authorized_keys
+.ssh/id_rsa
+.ssh/id_rsa.pub
+.ssh/known_hosts
+.ssh/known_hosts.old
+.sudo_as_admin_successful
+.viminfo
