@@ -8,11 +8,11 @@
 - name: "copy ansible folder"
   copy:
     src: /tmp/ansible
-    dest: /home/ubuntu/ansible
+    dest: /home/ubuntu/
     remote_src: yes
     mode: 0755
-#- name: "clean tmp folder"
-#  file:
-#    path: /tmp/ansible
-#    state: absent
+- name: "clean tmp folder"
+  file:
+    path: /tmp/ansible
+    state: absent
 
