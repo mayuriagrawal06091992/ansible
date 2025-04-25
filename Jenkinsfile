@@ -8,7 +8,7 @@ pipeline {
     }
        stage ('Build') {
         steps {
-          sh 'ansible-playbook playbook.yaml
+          sh 'ansible-playbook playbook.yaml'
         }
       }   
     }
