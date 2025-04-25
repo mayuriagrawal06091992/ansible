@@ -10,8 +10,7 @@ pipeline {
     }
        stage ('Build') {
         steps {
-          sh  ''
-          'ansible-playbook -i inventory playbook.yaml'
+          sh 'ansible-playbook -i inventory playbook.yaml'
         }
       }   
     }
