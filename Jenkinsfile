@@ -8,8 +8,8 @@ pipeline {
     }
        stage ('Build') {
         steps {
-          echo "deploying application"
-          ansible-playbook playbook.yaml
+          sh 'ansible-playbook playbook.yaml
         }
       }   
-    
+    }
+}
