@@ -1,6 +1,7 @@
 pipeline {
-  agent_any 
-    stages {
+  agent any 
+    
+  stages {
       stage ('Checkout') {
         steps {
           git 'https://github.com/mayuriagrawal06091992/ansible.git'
